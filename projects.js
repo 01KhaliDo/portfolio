@@ -2,12 +2,12 @@ const projects = [
     {
         title: { sv: "Webbchatt", en: "Web Chat" },
         description: {
-            sv: "Realtidsbaserad webbchatt med privata meddelanden, skrivindikatorer och notifikationer.",
-            en: "Real-time web chat with private messaging, typing indicators, and notifications."
+            sv: "En smidig webbapplikation för privata realtidskonversationer med skrivindikatorer och ljudnotiser.",
+            en: "A smooth web application for private real time conversations with typing indicators and sound notifications."
         },
-        tech: ["Node.js", "Socket.io", "JavaScript"],
-        live: "https://webchat-xso6.onrender.com",
-        github: "https://github.com/01khalido/chatt"
+        tech: ["Node.js", "Express", "Socket.io", "HTML5", "CSS", "JavaScript"],
+        live: "https://wavewebchat.vercel.app/",
+        github: "https://github.com/01KhaliDo/WaveWebChat"
     },
     {
         title: { sv: "RKD Travels", en: "RKD Travels" },

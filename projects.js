@@ -40,7 +40,7 @@ const projects = [
         live: "",
         github: "https://github.com/01khalido/Face-recognition-system",
         images: [
-            "project-images/face-recognition/1.png",
+            "project-images/face-recognition/1.jpg",
             "project-images/face-recognition/2.png"
         ]
     }
@@ -61,7 +61,7 @@ function renderProjects(lang = 'sv') {
 
         const galleryHTML = hasImages ? `
         <div class="project-gallery" id="gallery-${projectIndex}">
-            <img class="gallery-img" src="${images[0]}" alt="${title} screenshot" onerror="this.parentElement.style.display='none'">
+            <img class="gallery-img" src="${images[0]}" alt="${title} screenshot" onerror="this.parentElement.classList.add('gallery-hidden')">
             ${hasMultiple ? `
             <button class="gallery-btn gallery-prev" onclick="changeImage(${projectIndex}, -1)">&#8249;</button>
             <button class="gallery-btn gallery-next" onclick="changeImage(${projectIndex}, 1)">&#8250;</button>

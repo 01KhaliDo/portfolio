@@ -576,6 +576,10 @@ body.dark-mode .project-gallery {
     transform: scale(1.2);
 }
 
+.gallery-hidden {
+    display: none;
+}
+
 /* --- Contact --- */
 .contact-card {
     background: var(--glass-bg);

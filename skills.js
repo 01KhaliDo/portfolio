@@ -7,7 +7,11 @@ const skills = [
     { name: "MySQL", level: 70 },
     { name: "Git", level: 85 },
     { name: "Jira", level: 60 },
-    { name: "Agile / Scrum", level: 80 }
+    { name: "Agile / Scrum", level: 80 },
+    { name: "TCP/IP", level: 75 },
+    { name: "AWS", level: 65 },
+    { name: "Cisco routers & switchar", level: 70 },
+    { name: "Linux", level: 75 }
 ];
 
 const skillsContainer = document.querySelector(".skills-grid");

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         defaultLang: 'sv',
         defaultTheme: 'light',
         selectors: {
-            sidebarLinks: '.sidebar nav ul li a, .button-nav a',
+            sidebarLinks: '.topbar a[href^="#"], .button-nav a',
             langToggle: 'lang-toggle',
             darkToggle: 'dark-toggle',
             nextButton: '.next-button'
@@ -67,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update dynamic content (Projects / Skills)
         if (typeof renderProjects === 'function') renderProjects(lang);
-        if (typeof renderSkills === 'function') renderSkills();
+        if (typeof renderSkills === 'function') renderSkills(lang);
+        document.documentElement.lang = lang;
 
         // Update UI Controls
         updateLanguageButtonText(lang);
@@ -83,11 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateLanguageButtonText(lang) {
         const langToggle = document.getElementById(CONFIG.selectors.langToggle);
         if (langToggle) {
-            const targetLang = lang === 'sv' ? 'en' : 'sv';
-            const iconPath = targetLang === 'en' ? 'icons/en.png' : 'icons/sv.png';
-            const altText = targetLang === 'en' ? 'Switch to English' : 'Byt till Svenska';
-
-            langToggle.innerHTML = `<img src="${iconPath}" alt="${altText}" class="lang-flag" />`;
+            langToggle.textContent = translations[lang].lang_button;
+            langToggle.setAttribute('aria-label', translations[lang].lang_label);
         }
     }
 

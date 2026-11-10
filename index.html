@@ -4,137 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Portfolio</title>
+    <title>Khalid Saleh | Portfolio</title>
+    <meta name="description" content="Khalid Saleh, webbutvecklare. Projekt, färdigheter och kontakt.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-    <!-- Sidomeny -->
-    <div class="sidebar">
-        <nav>
-            <ul>
-                <li><a href="#home">
-                        <img src="icons/home.png" alt="Hem" />
-                        <span data-i18n="nav_home">Hem</span>
-                    </a></li>
-                <li><a href="#skills">
-                        <img src="icons/code.png" alt="Färdigheter" />
-                        <span data-i18n="nav_skills">Färdigheter</span>
-                    </a></li>
-                <li><a href="#projects">
-                        <img src="icons/project.png" alt="Projekt" />
-                        <span data-i18n="nav_projects">Projekt</span>
-                    </a></li>
-                <li><a href="#contact">
-                        <img src="icons/call.png" alt="Kontakt" />
-                        <span data-i18n="nav_contact">Kontakt</span>
-                    </a></li>
-            </ul>
+    <a class="skip-link" href="#projects" data-i18n="skip">Hoppa till projekten</a>
 
+    <header class="topbar">
+        <a href="#home" class="topbar-name">Khalid Saleh</a>
+        <nav class="topbar-nav" aria-label="Huvudmeny">
+            <a href="#projects" data-i18n="nav_projects">Projekt</a>
+            <a href="#skills" data-i18n="nav_skills">Färdigheter</a>
+            <a href="#contact" data-i18n="nav_contact">Kontakt</a>
         </nav>
-    </div>
-
-
-
-
-    <!-- Huvudinnehåll -->
-    <div class="main-content">
-        <!-- Första sidan - Om mig -->
-        <div id="home" class="section">
-            <div class="profile-section">
-                <!-- Flexbox container för bild och text -->
-                <div class="profile-container">
-                    <!-- Profilbild med ram -->
-                    <div class="profile-img">
-                        <img src="icons/bild.jpg" alt="Khalid Saleh" />
-                    </div>
-                    <!-- Textsektion -->
-                    <div class="profile-text">
-                        <h1 data-i18n="hero_title">Khalid Saleh</h1>
-                        <h3 data-i18n="hero_subtitle">Hej! Jag är en student inom Datateknik med ett stort intresse för
-                            webbutveckling.</h3>
-                        <p data-i18n="hero_desc">Jag brinner för att lösa tekniska problem och utveckla innovativa
-                            lösningar. Med en stark
-                            grund inom programmering och systemutveckling arbetar jag med olika programmeringsspråk för
-                            att skapa effektiva applikationer.</p>
-                        <nav class="button-nav">
-                            <a href="#projects" class="cta-button" data-i18n="hero_cta_projects">Gå till Projekt</a>
-                            <a href="#contact" class="cta-button" data-i18n="hero_cta_contact">Gå till Kontakt</a>
-                            <a href="cv/cv-se.pdf" target="_blank" class="cta-button" id="cv-link"
-                                data-i18n="hero_cta_cv">CV</a>
-                        </nav>
-                    </div>
-                </div>
-
-            </div>
+        <div class="controls-container">
+            <button class="control-btn" id="lang-toggle" type="button">EN</button>
+            <button class="control-btn next-button" id="dark-toggle" type="button" data-i18n="toggle_dark">Mörkt läge</button>
         </div>
+    </header>
 
-        <!-- Sektion för Kontakt -->
-        <div id="skills" class="section">
+    <main class="main-content">
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1>Khalid Saleh</h1>
+                <p class="hero-desc" data-i18n="hero_desc"></p>
+                <nav class="button-nav">
+                    <a href="#projects" class="cta-button" data-i18n="hero_cta_projects">Se projekten</a>
+                    <a href="https://github.com/01KhaliDo" target="_blank" rel="noopener" class="cta-button cta-secondary">GitHub</a>
+                    <a href="https://www.linkedin.com/in/khalid-saleh-8a969a297/" target="_blank" rel="noopener" class="cta-button cta-secondary">LinkedIn</a>
+                </nav>
+            </div>
+            <div class="hero-portrait">
+                <img src="icons/bild.jpg" alt="Porträtt av Khalid Saleh" width="420" height="420">
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 data-i18n="section_projects">Projekt</h2>
+            <p class="section-intro" data-i18n="projects_intro"></p>
+            <div class="projects-grid"></div>
+        </section>
+
+        <section id="skills" class="section">
             <h2 data-i18n="section_skills">Färdigheter</h2>
             <div class="skills-grid"></div>
-        </div>
+        </section>
 
-
-        <!-- Sektion för Projekt -->
-        <div id="projects" class="section">
-            <h2 data-i18n="section_projects">Projekt</h2>
-            <div class="projects-grid"></div>
-        </div>
-
-
-        <!-- Sektion för Kontakt -->
-        <div id="contact" class="section">
+        <section id="contact" class="section contact">
             <h2 data-i18n="section_contact">Kontakt</h2>
+            <p class="contact-text" data-i18n="contact_text"></p>
+            <a class="contact-mail" href="mailto:khalidsaleh00@hotmail.com">khalidsaleh00@hotmail.com</a>
+            <ul class="contact-list">
+                <li><a href="tel:+46767119656">076-711 96 56</a></li>
+                <li><a href="https://www.linkedin.com/in/khalid-saleh-8a969a297/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/01KhaliDo" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </section>
+    </main>
 
-            <div class="contact-card">
-                <p data-i18n="contact_text">
-                    Vill du komma i kontakt med mig eller veta mer om mina projekt?
-                    Tveka inte att höra av dig.
-                </p>
+    <footer class="footer">
+        <p>Khalid Saleh</p>
+    </footer>
 
-                <ul class="contact-list">
-                    <li>
-                        <a href="mailto:khalidsaleh00@hotmail.com">
-                            📧 Khalidsaleh00@hotmail.com
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+46767119656">
-                            <img src="icons/call.png" alt="Phone" class="social-icon"> 076-711 96 56
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/khalid-saleh-8a969a297/" target="_blank">
-                            <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon"> LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/01khalido" target="_blank">
-                            <img src="icons/github.png" alt="GitHub" class="social-icon"> GitHub
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Scripts -->
-        <script src="translations.js"></script>
-        <script src="skills.js"></script>
-        <script src="projects.js"></script>
-        <script src="main.js" defer></script>
-
-        <div class="controls-container">
-            <button class="control-btn" id="lang-toggle">
-                EN
-            </button>
-            <div class="separator"></div>
-            <button class="control-btn next-button" id="dark-toggle" data-i18n="toggle_dark">
-                Dark Mode
-            </button>
-        </div>
+    <script src="translations.js"></script>
+    <script src="skills.js"></script>
+    <script src="projects.js"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>

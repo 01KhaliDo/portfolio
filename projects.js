@@ -6,7 +6,8 @@ const projects = [
             en: "A bot that monitors Hertz Freerider and sends a notification when a new free rental car shows up between two cities. I found the site's internal API, which made the bot fast and stable. It runs serverless and handles several users at the same time."
         },
         tech: ["JavaScript", "Cloudflare Workers", "Workers KV", "Telegram Bot API"],
-        live: "",
+        live: "https://t.me/hertz_free_rider_bot",
+        liveLabel: { sv: "Testa boten i Telegram", en: "Try the bot on Telegram" },
         github: "https://github.com/01KhaliDo/hertz-freerider-bot",
         images: []
     },
@@ -87,7 +88,7 @@ function renderProjects(lang = 'sv') {
         </div>` : '';
 
         const links = [
-            project.live ? `<a href="${project.live}" target="_blank" rel="noopener">${t.project_link_live}</a>` : '',
+            project.live ? `<a href="${project.live}" target="_blank" rel="noopener">${project.liveLabel ? (project.liveLabel[lang] || project.liveLabel.sv) : t.project_link_live}</a>` : '',
             project.github ? `<a href="${project.github}" target="_blank" rel="noopener">${t.project_link_github}</a>` : ''
         ].join('');
 
